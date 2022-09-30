@@ -168,6 +168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeprefab: {fileID: 4245407420663961425, guid: e96def8f3fca88945866f66c1b516618, type: 3}
+  objectsspawning:
+  - {fileID: 1562878660}
+  - {fileID: 529902650}
+  - {fileID: 577735941}
+  - {fileID: 4245407420663961425, guid: e96def8f3fca88945866f66c1b516618, type: 3}
 --- !u!1 &254554478
 GameObject:
   m_ObjectHideFlags: 0
