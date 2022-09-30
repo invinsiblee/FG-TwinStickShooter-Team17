@@ -1,18 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class EnemyMovement : MonoBehaviour
+namespace Enemies
 {
-    // Start is called before the first frame update
-    void Start()
+    public class EnemyMovement : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private EnemyStatsSo stats;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField] private GameObject player;
+
+        private void Update()
+        {
+            transform.LookAt(player.transform);
+            Move();
+        }
+
+        void Move()
+        {
+            
+        }
     }
 }

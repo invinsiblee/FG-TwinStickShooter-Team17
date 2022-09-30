@@ -1,18 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCombat : MonoBehaviour
+namespace Enemies
 {
-    // Start is called before the first frame update
-    void Start()
+    public class EnemyCombat : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private EnemyStatsSo stats;
+        [SerializeField] private Transform bulletPosition;
+        [SerializeField] private GameObject bullet;
 
-    // Update is called once per frame
-    void Update()
-    {
+        private float currentFrame;
         
+        private void Update()
+        {
+            SpawnBullet();
+        }
+
+        void SpawnBullet()
+        {
+            if (currentFrame <= 0)
+            {
+                var BulletSpawn = new Vector3(bulletPosition.position.x, bulletPosition.position.y,
+                    bulletPosition.position.z);
+                currentFrame = stats.timeUntilNextShot;
+                //instantiate 
+                Instantiate(bullet, BulletSpawn, new Quaternion()); 
+            }
+        }
     }
 }
