@@ -1226,7 +1226,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28532
+  m_Name: pb_Mesh32532
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1456,7 +1456,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28492
+  m_Name: pb_Mesh32488
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2057,7 +2057,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28480
+  m_Name: pb_Mesh32464
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2254,6 +2254,7 @@ MonoBehaviour:
   gravityValue: -9.81
   controllerDeadzone: 0.1
   gamepadRotateSomoothing: 1000
+  smoothInputSpeed: 0.2
   isGamepad: 0
 --- !u!114 &1719933190
 MonoBehaviour:

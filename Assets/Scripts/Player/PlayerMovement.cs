@@ -7,16 +7,20 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 
 public class PlayerMovement : MonoBehaviour
-{
+{    
     [SerializeField] private float playerSpeed = 5f;
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float controllerDeadzone = 0.1f;
     [SerializeField] private float gamepadRotateSomoothing = 1000f;
+    [SerializeField] private float smoothInputSpeed = .2f;
 
     [SerializeField] private bool isGamepad;
 
+
     private CharacterController controller;
 
+    private Vector2 smoothInputVelocity;
+    private Vector2 currentInputVector;
     private Vector2 movement;
     private Vector2 aim;
     private Vector3 playerVelocity;
@@ -29,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerControls = new PlayerControls();
         playerInput = GetComponent<PlayerInput>();
+        movement = Vector3.zero;
     }
     private void OnEnable()
     {
@@ -46,14 +51,16 @@ public class PlayerMovement : MonoBehaviour
         HandleShootInput();
     }
     void HandleInput()
-    {
+    { 
         movement = playerControls.Controls.Movement.ReadValue<Vector2>();
         aim = playerControls.Controls.Aim.ReadValue<Vector2>();
     }
     void HandleMovement()
     {
         {
-            Vector3 move = new Vector3(movement.x, 0, movement.y);
+            currentInputVector = Vector2.SmoothDamp(currentInputVector, movement, ref smoothInputVelocity, smoothInputSpeed);
+
+            Vector3 move = new Vector3(currentInputVector.x, 0, currentInputVector.y);
             controller.Move(move * Time.deltaTime * playerSpeed);
             playerVelocity.y += gravityValue * Time.deltaTime;
             controller.Move(playerVelocity * Time.deltaTime);
@@ -76,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 
             if (Physics.Raycast(ray, out hit))
             {
@@ -104,3 +111,4 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
+
