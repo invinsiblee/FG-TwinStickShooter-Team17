@@ -11,6 +11,5 @@ public class DestroyMe : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
-        
     }
 }
