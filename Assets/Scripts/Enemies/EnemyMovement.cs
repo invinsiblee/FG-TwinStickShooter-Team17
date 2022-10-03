@@ -18,6 +18,7 @@ namespace Enemies
         private void Start()
         {
             controller = GetComponent<CharacterController>();
+            player = GameObject.Find("Player");
         }
 
         private void Update()

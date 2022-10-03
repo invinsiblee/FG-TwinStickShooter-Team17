@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Enemies
@@ -7,12 +8,19 @@ namespace Enemies
         [SerializeField] private EnemyStatsSo stats;
         [SerializeField] private Transform bulletPosition;
         [SerializeField] private GameObject bullet;
+        [SerializeField] private AudioSource shoot;
 
         private float currentFrame;
-        
+
+        private void Start()
+        {
+            shoot = GameObject.Find("EnemyShoot").GetComponent<AudioSource>();
+        }
+
         private void Update()
         {
             SpawnBullet();
+            currentFrame -= 1 * Time.deltaTime;
         }
 
         void SpawnBullet()
@@ -23,6 +31,7 @@ namespace Enemies
                     bulletPosition.position.z);
                 currentFrame = stats.timeUntilNextShot;
                 //instantiate 
+                shoot.Play();
                 Instantiate(bullet, BulletSpawn, new Quaternion()); 
             }
         }
