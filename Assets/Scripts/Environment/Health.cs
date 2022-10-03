@@ -28,11 +28,11 @@ public class Health : MonoBehaviour
         enemyDeath = GameObject.Find("EnemyDeath").GetComponent<AudioSource>();
         spawnerScript = manager.GetComponent<RandomSpawner>();
         enemySpawner = manager.GetComponent<EnemySpawner>();
+        
         currentHealth = stats.health;
         spawnerScript.currentObjects += 1;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         Death();
@@ -47,6 +47,7 @@ public class Health : MonoBehaviour
             {
                 enemySpawner.currentObjects -= 1;
                 enemyDeath.Play();
+                //instantiate particle effect
             }
             else
             {
