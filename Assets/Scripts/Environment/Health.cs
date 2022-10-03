@@ -64,4 +64,22 @@ public class Health : MonoBehaviour
             Destroy(gameObject);
         }   
     }
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Bullet")
+        {
+            TakeDamage(5);
+        }
+      
+        if (collision.collider.tag == "ShotgunProjectile")
+        {
+            TakeDamage(50);
+        }
+    
+    }
+
 }

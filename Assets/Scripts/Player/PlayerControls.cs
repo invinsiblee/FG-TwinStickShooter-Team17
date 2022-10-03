@@ -53,6 +53,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""ad45dc9b-5f92-48d2-8dea-1fe90e282224"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -154,6 +163,28 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Shotgun"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d29a0ae2-a346-4ae4-b3cd-20451130f514"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d972a952-2c33-4f0e-81d9-812818890b2a"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -193,6 +224,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Controls_Movement = m_Controls.FindAction("Movement", throwIfNotFound: true);
         m_Controls_Aim = m_Controls.FindAction("Aim", throwIfNotFound: true);
         m_Controls_Shotgun = m_Controls.FindAction("Shotgun", throwIfNotFound: true);
+        m_Controls_Dash = m_Controls.FindAction("Dash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -255,6 +287,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Movement;
     private readonly InputAction m_Controls_Aim;
     private readonly InputAction m_Controls_Shotgun;
+    private readonly InputAction m_Controls_Dash;
     public struct ControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -262,6 +295,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Controls_Movement;
         public InputAction @Aim => m_Wrapper.m_Controls_Aim;
         public InputAction @Shotgun => m_Wrapper.m_Controls_Shotgun;
+        public InputAction @Dash => m_Wrapper.m_Controls_Dash;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -280,6 +314,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Shotgun.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnShotgun;
                 @Shotgun.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnShotgun;
                 @Shotgun.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnShotgun;
+                @Dash.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDash;
             }
             m_Wrapper.m_ControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -293,6 +330,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Shotgun.started += instance.OnShotgun;
                 @Shotgun.performed += instance.OnShotgun;
                 @Shotgun.canceled += instance.OnShotgun;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
             }
         }
     }
@@ -320,5 +360,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
         void OnShotgun(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
     }
 }

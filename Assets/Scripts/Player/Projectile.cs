@@ -29,4 +29,11 @@ public class Projectile : MonoBehaviour
             transform.Translate(Vector3.forward * projectileSpeed * Time.deltaTime);
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Enemy")
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float controllerDeadzone = 0.1f;
     [SerializeField] private float gamepadRotateSomoothing = 1000f;
     [SerializeField] private float smoothInputSpeed = .2f;
+    [SerializeField] private Rigidbody playerBody;
+    public float dashSpeed;
+    public float dashTime;
 
     [SerializeField] private bool isGamepad;
 
@@ -50,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         HandleMovement();
         HandleRotation();
         HandleShootInput();
+        HandleDash();
     }
     void HandleInput()
     { 
@@ -113,9 +117,29 @@ public class PlayerMovement : MonoBehaviour
     }
     void HandleShotgunInput()
     
-        {
+    {
             Shotgun.Instance.ShotgunShoot();
+    }
+    void HandleDash()
+    {
+        playerControls.Controls.Dash.performed += ctx => Dash();
+
+        void Dash()
+        {
+            StartCoroutine(DashMove());
         }
-    
+
+        IEnumerator DashMove()
+        {
+            float startTime = Time.time;
+
+            while (Time.time < startTime + dashTime)
+            {
+                transform.Translate(Vector3.forward * dashSpeed);
+
+                yield return null;
+            }
+        }
+    }
 }
 
