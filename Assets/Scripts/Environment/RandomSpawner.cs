@@ -7,6 +7,8 @@ public class RandomSpawner : MonoBehaviour
 {
     public GameObject[] spawnGameObject; // The variable for the chosen object or objects to spawn.
     [Header("Spawn timer")]
+    
+    [HideInInspector] 
     public float spawnWait;
     public float spawnMostWait;
     public float spawnLeastWait;
