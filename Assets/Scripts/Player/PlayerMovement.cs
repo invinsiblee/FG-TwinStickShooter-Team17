@@ -33,7 +33,8 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerControls = new PlayerControls();
         playerInput = GetComponent<PlayerInput>();
-        movement = Vector3.zero;
+
+        playerControls.Controls.Shotgun.performed += ctx => HandleShotgunInput();
     }
     private void OnEnable()
     {
@@ -110,5 +111,11 @@ public class PlayerMovement : MonoBehaviour
             PlayerGun.Instance.Shoot();
         }
     }
+    void HandleShotgunInput()
+    
+        {
+            Shotgun.Instance.ShotgunShoot();
+        }
+    
 }
 
