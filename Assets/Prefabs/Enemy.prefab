@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 43abbb3b1a07c534f815b64007e7de15, type: 2}
   bulletPosition: {fileID: 6246957490103044898}
-  bullet: {fileID: 7315841953305791997, guid: 0ee520ca613845243b37da9319340645, type: 3}
+  bullet: {fileID: 9017699028443568486, guid: a00cbd374b54e7847b53a8d4812a5bd7, type: 3}
   shoot: {fileID: 0}
 --- !u!135 &6246957489051335033
 SphereCollider:

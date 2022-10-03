@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject[] ObjectsToSpawn
-        ;
+    public GameObject[] ObjectsToSpawn;
+    
     [Header("Spawn timer")]
     [HideInInspector] 
     [SerializeField] private float spawnWait;

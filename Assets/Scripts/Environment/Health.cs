@@ -30,7 +30,14 @@ public class Health : MonoBehaviour
         enemySpawner = manager.GetComponent<EnemySpawner>();
         
         currentHealth = stats.health;
-        spawnerScript.currentObjects += 1;
+        if (enemy)
+        {
+            enemySpawner.currentObjects += 1;
+        }
+        else
+        {
+            spawnerScript.currentObjects += 1;
+        }
     }
     
     void Update()

@@ -9,5 +9,6 @@ namespace Enemies
         public float speed;
         public float damage;
         public float timeUntilNextShot;
+        public float bulletSpeed;
     }
 }
