@@ -1431,6 +1431,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 624540476}
   - {fileID: 963194228}
   - {fileID: 2737791784066608048}
   - {fileID: 1774443618}
@@ -2608,6 +2609,57 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
+--- !u!1 &624540475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 624540476}
+  - component: {fileID: 624540477}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Manager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &624540476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624540475}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 337885149}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &624540477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624540475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b32885b7971031419b3c160c02cd228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnGameObject:
+  - {fileID: 7011685002113066677, guid: 6ba8f0151f43d3443a326af70e0dc58f, type: 3}
+  spawnWait: 0
+  spawnMostWait: 10
+  spawnLeastWait: 2
+  totalObjects: 10
+  currentObjects: 0
 --- !u!1 &631791028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2724,7 +2776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 43abbb3b1a07c534f815b64007e7de15, type: 2}
   bulletPosition: {fileID: 1694003175}
-  bullet: {fileID: 0}
+  bullet: {fileID: 7315841953305791997, guid: 0ee520ca613845243b37da9319340645, type: 3}
 --- !u!135 &631791036
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2944,38 +2996,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fde830a43d921ea439f31e641484f99a, type: 3}
+  m_Script: {fileID: 11500000, guid: c14c8ac45416bb14ab6df6bfb5fb93dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 493070748}
-  currentState: 0
-  shouldAlwaysFollowPlayerInGameplay: 0
-  screenEdgeForFollow: {x: 0.25, y: 0.25}
-  followDamping: 50
-  dampingScreenEdgeDistance:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 3.0695317
-      outSlope: 3.0695317
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.08067729
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  target: {fileID: 2737791784066608048}
+  smoothSpeed: 0.1
+  offset: {x: 0, y: 20, z: -5}
 --- !u!1 &1044103903
 GameObject:
   m_ObjectHideFlags: 0
@@ -9667,6 +9693,11 @@ Transform:
   m_Father: {fileID: 460031681}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -100.18, y: 0, z: 0}
+--- !u!4 &1999775467 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 879194216, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+  m_PrefabInstance: {fileID: 2737791784066608047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2014551260
 GameObject:
   m_ObjectHideFlags: 0
@@ -10276,6 +10307,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 337885149}
     m_Modifications:
+    - target: {fileID: 493070761, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 1999775467}
+    - target: {fileID: 493070761, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: bulletForce
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2737791784416854540, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: m_Camera
       value: 

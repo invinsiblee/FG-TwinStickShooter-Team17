@@ -13,6 +13,7 @@ namespace Enemies
         private void Update()
         {
             SpawnBullet();
+            currentFrame -= 1 * Time.deltaTime;
         }
 
         void SpawnBullet()
