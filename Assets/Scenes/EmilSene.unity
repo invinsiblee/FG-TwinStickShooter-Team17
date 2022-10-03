@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 9750749}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,10 +172,10 @@ MonoBehaviour:
   - {fileID: 3714617474045302156, guid: 902249296426f2f49b4f81c7975f3c5c, type: 3}
   - {fileID: 5957697983583110313, guid: 8316c50dbeed2144ea857ce6f6bbf46e, type: 3}
   spawnWait: 0
-  spawnMostWait: 2
-  spawnLeastWait: 0.5
-  startWait: 1
-  stop: 1
+  spawnMostWait: 5
+  spawnLeastWait: 2
+  totalObjects: 10
+  currentObjects: 0
 --- !u!1 &88434864
 GameObject:
   m_ObjectHideFlags: 0
