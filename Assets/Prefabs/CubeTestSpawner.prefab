@@ -128,5 +128,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 10
-  maxHealth: 10
+  stats: {fileID: 11400000, guid: 1bf07ca03c70ac54aad7bba39964e4c5, type: 2}
   spawnerScript: {fileID: 0}
