@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         HandleInput();
         HandleMovement();
         HandleRotation();
+        HandleShootInput();
     }
     void HandleInput()
     {
@@ -93,5 +94,13 @@ public class PlayerMovement : MonoBehaviour
     public void OnDeviceChange (PlayerInput pi)
     {
         isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
+    }
+
+    void HandleShootInput()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            PlayerGun.Instance.Shoot();
+        }
     }
 }
