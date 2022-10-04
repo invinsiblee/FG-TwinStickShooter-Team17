@@ -36,4 +36,12 @@ public class Projectile : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("GoodBullet"))
+        {
+            Destroy(this.gameObject);
+            Destroy(other.gameObject);
+        }
+    }
 }

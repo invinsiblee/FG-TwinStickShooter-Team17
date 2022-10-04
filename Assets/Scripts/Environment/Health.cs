@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
      */
     public float currentHealth;
     [SerializeField] private EnemyStatsSo stats;
+    [SerializeField] private GameObject deathParticle;
     
     //Manager
     private GameObject manager;
@@ -51,9 +52,9 @@ public class Health : MonoBehaviour
             currentHealth = 0;
             if (enemy)
             {
+                Instantiate(deathParticle, transform.position, Quaternion.identity);
                 enemySpawner.currentObjects -= 1;
                 enemyDeath.Play();
-                //instantiate particle effect
             }
             else
             {
@@ -67,14 +68,10 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damage;
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Bullet"))
-        {
-            TakeDamage(5);
-        }
 
-        if (other.CompareTag("ShotgunProjectile"))
+        if (collision.collider.tag == "ShotgunProjectile")
         {
             TakeDamage(50);
         }

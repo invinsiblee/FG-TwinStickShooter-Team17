@@ -206,17 +206,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613e40ed91ff64b4fab798611d12881b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFrame: 0
-  maxFrames: 0.25
   playerHealth: {fileID: 4072493389357882139}
   playerSpeed: 5
   gravityValue: -9.81
   controllerDeadzone: 0.1
-  gamepadRotateSomoothing: 1000
+  gamepadRotateSmoothing: 1000
   smoothInputSpeed: 0.2
-  playerBody: {fileID: 0}
   dashSpeed: 0.5
   dashTime: 0.1
+  currentMortalFrame: 0
+  maxMortalFrames: 0.25
   isGamepad: 0
 --- !u!1 &4072493389676259024
 GameObject:
@@ -309,7 +308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4072493390584150339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06718516, y: 0.6374191, z: 0.605783}
+  m_LocalPosition: {x: 0.06718516, y: 0.009, z: 0.605783}
   m_LocalScale: {x: 0.16915, y: 0.16915, z: 0.5669205}
   m_ConstrainProportionsScale: 0
   m_Children:
