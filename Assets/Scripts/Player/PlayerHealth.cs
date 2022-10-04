@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [HideInInspector] public bool mortal = true;
+    public bool mortal = true;
     
     [SerializeField] private int maxHealth;
     [HideInInspector] public float currentHealth;
