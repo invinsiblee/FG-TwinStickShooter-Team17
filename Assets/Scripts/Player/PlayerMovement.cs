@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Player;
 
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(PlayerInput))]
 
 public class PlayerMovement : MonoBehaviour
-{    
+{
+    public float currentFrame;
+    [SerializeField] public float maxFrames;
+
+    [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private float playerSpeed = 5f;
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float controllerDeadzone = 0.1f;
@@ -127,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         void Dash()
         {
             StartCoroutine(DashMove());
+            DashImmortality();
         }
 
         IEnumerator DashMove()
@@ -139,6 +145,19 @@ public class PlayerMovement : MonoBehaviour
 
                 yield return null;
             }
+        }
+    }
+    public void DashImmortality()
+    {
+        Debug.Log("Immortal");
+        currentFrame = maxFrames;
+        playerHealth.mortal = false;
+
+        if (currentFrame <= 0)
+        {
+            currentFrame = 0;
+            playerHealth.mortal = true;
+            Debug.Log("NotImmortal");
         }
     }
 }

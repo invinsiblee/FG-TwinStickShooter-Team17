@@ -6,7 +6,7 @@ namespace Player
 {
     public class PlayerHealth : MonoBehaviour
     {
-        [HideInInspector] public bool mortal;
+         public bool mortal;
         
     }
 }
