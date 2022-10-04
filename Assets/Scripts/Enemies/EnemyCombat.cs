@@ -1,11 +1,12 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyCombat : MonoBehaviour
 {
     [SerializeField] private EnemyStatsSo stats;
     [SerializeField] private Transform bulletPosition;
-    [SerializeField] private GameObject bullet;
+    [SerializeField] private GameObject[] bullet;
     [SerializeField] private AudioSource shoot;
 
     private float currentFrame;
@@ -30,7 +31,8 @@ public class EnemyCombat : MonoBehaviour
             currentFrame = stats.timeUntilNextShot;
             //instantiate 
             shoot.Play();
-            Instantiate(bullet, BulletSpawn, new Quaternion()); 
+            
+            Instantiate(bullet[Random.Range(0,2)], BulletSpawn, new Quaternion()); 
         }
     }
 }
