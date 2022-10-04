@@ -2345,6 +2345,7 @@ GameObject:
   - component: {fileID: 1719933192}
   - component: {fileID: 1719933191}
   - component: {fileID: 1719933190}
+  - component: {fileID: 1719933198}
   - component: {fileID: 1719933189}
   - component: {fileID: 1719933197}
   m_Layer: 0
@@ -2366,6 +2367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613e40ed91ff64b4fab798611d12881b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentFrame: 0
+  maxFrames: 0.25
+  playerHealth: {fileID: 1719933198}
   playerSpeed: 5
   gravityValue: -9.81
   controllerDeadzone: 0.1
@@ -2543,11 +2547,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 124c1714e0ff73548b46dfc50ac9cf1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 0.1
-  dashTime: 0.1
   currentFrame: 0
   maxFrames: 0
   playerHealth: {fileID: 0}
+--- !u!114 &1719933198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719933188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5295c0b9fdf639a40bb293393d0a37a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mortal: 0
 --- !u!1 &2105881147
 GameObject:
   m_ObjectHideFlags: 0
