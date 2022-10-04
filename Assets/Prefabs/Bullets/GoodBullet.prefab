@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9017699028443568485}
   - component: {fileID: -2385751914210278161}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: GoodBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a2a3ce87bb24bba4d91bd5832a51683c, type: 2}
+  - {fileID: 2100000, guid: 0e1ab490692fc2742a760dc58249cdf8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,4 +111,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 43abbb3b1a07c534f815b64007e7de15, type: 2}
-  speed: 5
