@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public float dashTime;
     [HideInInspector] public float currentMortalFrame;
     [SerializeField] private float maxMortalFrames = 0.25f;
+    [SerializeField] float dashCooldown;
+    private float lastTimeDashed = 0;
 
     [SerializeField] private bool isGamepad;
     
@@ -142,7 +144,11 @@ public class PlayerMovement : MonoBehaviour
 
         void Dash()
         {
-            StartCoroutine(DashMove());
+            if (lastTimeDashed + dashCooldown < Time.time)
+            {
+                lastTimeDashed = Time.time;
+                StartCoroutine(DashMove());
+            }
         }
 
         IEnumerator DashMove()
