@@ -11179,6 +11179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: maxCooldownFrames
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4072493389357882136, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: playerHealth
       value: 

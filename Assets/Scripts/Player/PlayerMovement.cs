@@ -8,22 +8,23 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float currentFrame;
-    [SerializeField] public float maxFrames;
-
     [SerializeField] private PlayerHealth playerHealth;
+    
+    [Header("Movement")]
     [SerializeField] private float playerSpeed = 5f;
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float controllerDeadzone = 0.1f;
-    [SerializeField] private float gamepadRotateSomoothing = 1000f;
+    [SerializeField] private float gamepadRotateSmoothing = 1000f;
     [SerializeField] private float smoothInputSpeed = .2f;
-    [SerializeField] private Rigidbody playerBody;
+    
+    [Header("Dashing")]
     public float dashSpeed;
     public float dashTime;
+    [HideInInspector] public float currentMortalFrame;
+    [SerializeField] private float maxMortalFrames = 0.25f;
 
     [SerializeField] private bool isGamepad;
-
-
+    
     private CharacterController controller;
 
     private Vector2 smoothInputVelocity;
@@ -86,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
                 if (playerDirection.sqrMagnitude > 0.0f)
                 {
                     Quaternion newrotation = Quaternion.LookRotation(playerDirection, Vector3.up);
-                    transform.rotation = Quaternion.RotateTowards(transform.rotation, newrotation, gamepadRotateSomoothing * Time.deltaTime);
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, newrotation, gamepadRotateSmoothing * Time.deltaTime);
                 }
             }
         }
@@ -128,12 +129,12 @@ public class PlayerMovement : MonoBehaviour
     
     void HandleDash()
     {
-        //Immortality timer
-        currentFrame -= 1 * Time.deltaTime;
+        //timers
+        currentMortalFrame -= 1 * Time.deltaTime;
         
-        if (currentFrame <= 0)
+        if (currentMortalFrame <= 0)
         {
-            currentFrame = 0;
+            currentMortalFrame = 0;
             playerHealth.mortal = true;
         }
         
@@ -146,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
 
         IEnumerator DashMove()
         {
-            currentFrame = maxFrames;
+            currentMortalFrame = maxMortalFrames;
             playerHealth.mortal = false;
             
             float startTime = Time.time;
