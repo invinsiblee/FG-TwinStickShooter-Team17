@@ -8,11 +8,14 @@ public class PlayerHealth : MonoBehaviour
     public bool mortal = true;
     
     [SerializeField] private int maxHealth = 100;
-    public float currentHealth;
+    public int currentHealth;
 
-    private void Start()
+    public HealthBar healthBar;
+
+    void Start()
     {
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
     
     void Update()
@@ -41,6 +44,8 @@ public class PlayerHealth : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
     }
     private void OnTriggerEnter(Collider other)
     {
