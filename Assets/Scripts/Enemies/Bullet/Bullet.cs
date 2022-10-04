@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Enemies;
+
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private EnemyStatsSo stats;
