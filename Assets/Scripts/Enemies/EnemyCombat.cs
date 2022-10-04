@@ -1,39 +1,30 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-namespace Enemies
+public class EnemyCombat : MonoBehaviour
 {
-    public class EnemyCombat : MonoBehaviour
+    [SerializeField] private EnemyStatsSo stats;
+    [SerializeField] private Transform bulletPosition;
+    [SerializeField] private GameObject[] bullet;
+
+    private float currentFrame;
+
+    private void Update()
     {
-        [SerializeField] private EnemyStatsSo stats;
-        [SerializeField] private Transform bulletPosition;
-        [SerializeField] private GameObject bullet;
-        [SerializeField] private AudioSource shoot;
+        SpawnBullet();
+        currentFrame -= 1 * Time.deltaTime;
+    }
 
-        private float currentFrame;
-
-        private void Start()
+    void SpawnBullet()
+    {
+        if (currentFrame <= 0)
         {
-            shoot = GameObject.Find("EnemyShoot").GetComponent<AudioSource>();
-        }
+            var BulletSpawn = new Vector3(bulletPosition.position.x, bulletPosition.position.y,
+                bulletPosition.position.z);
+            currentFrame = stats.timeUntilNextShot;
 
-        private void Update()
-        {
-            SpawnBullet();
-            currentFrame -= 1 * Time.deltaTime;
-        }
-
-        void SpawnBullet()
-        {
-            if (currentFrame <= 0)
-            {
-                var BulletSpawn = new Vector3(bulletPosition.position.x, bulletPosition.position.y,
-                    bulletPosition.position.z);
-                currentFrame = stats.timeUntilNextShot;
-                //instantiate 
-                shoot.Play();
-                Instantiate(bullet, BulletSpawn, new Quaternion()); 
-            }
+            Instantiate(bullet[Random.Range(0,2)], BulletSpawn, new Quaternion()); 
         }
     }
 }

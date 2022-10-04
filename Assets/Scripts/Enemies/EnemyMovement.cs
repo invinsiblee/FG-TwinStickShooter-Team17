@@ -1,12 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-namespace Enemies
-{
     public class EnemyMovement : MonoBehaviour
     {
         [SerializeField] private EnemyStatsSo stats;
@@ -65,4 +58,3 @@ namespace Enemies
             }
         }
     }
-}

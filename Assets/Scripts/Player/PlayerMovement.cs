@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Player;
 
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(PlayerInput))]
@@ -76,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(playerVelocity * Time.deltaTime);
         }
     }
+    
     void HandleRotation()
     {
         if (isGamepad)
@@ -142,11 +142,13 @@ public class PlayerMovement : MonoBehaviour
         void Dash()
         {
             StartCoroutine(DashMove());
-            DashImmortality();
         }
 
         IEnumerator DashMove()
         {
+            currentFrame = maxFrames;
+            playerHealth.mortal = false;
+            
             float startTime = Time.time;
 
             while (Time.time < startTime + dashTime)
@@ -157,10 +159,4 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-    public void DashImmortality()
-    {
-        currentFrame = maxFrames;
-        playerHealth.mortal = false;
-    }
 }
-

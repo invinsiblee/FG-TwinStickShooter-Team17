@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class RandomSpawner : MonoBehaviour
 {
     public GameObject[] spawnGameObject; // The variable for the chosen object or objects to spawn.
@@ -29,7 +28,7 @@ public class RandomSpawner : MonoBehaviour
         int randimIndex = Random.Range(0, spawnGameObject.Length);
 
         // Randomises the spawn position with the x/y/z axis also horizontially and vertically.
-        Vector3 randomSpawnPosition = new Vector3(Random.Range(-85, 85), 5, Random.Range(-87, 87));
+        Vector3 randomSpawnPosition = new Vector3(Random.Range(-65, 65), 5, Random.Range(-60, 60));
 
         if (currentObjects < totalObjects && spawnWait <= 0)
         {
