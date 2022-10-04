@@ -32,7 +32,7 @@ using UnityEngine;
             }
             else
             {
-                controller.Move(velocity * (-5 * Time.deltaTime));
+                controller.Move(velocity * (-1 * Time.deltaTime));
             }
         }
 
