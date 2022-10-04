@@ -7,14 +7,8 @@ public class EnemyCombat : MonoBehaviour
     [SerializeField] private EnemyStatsSo stats;
     [SerializeField] private Transform bulletPosition;
     [SerializeField] private GameObject[] bullet;
-    [SerializeField] private AudioSource shoot;
 
     private float currentFrame;
-
-    private void Start()
-    {
-        shoot = GameObject.Find("EnemyShoot").GetComponent<AudioSource>();
-    }
 
     private void Update()
     {
@@ -29,9 +23,7 @@ public class EnemyCombat : MonoBehaviour
             var BulletSpawn = new Vector3(bulletPosition.position.x, bulletPosition.position.y,
                 bulletPosition.position.z);
             currentFrame = stats.timeUntilNextShot;
-            //instantiate 
-            shoot.Play();
-            
+
             Instantiate(bullet[Random.Range(0,2)], BulletSpawn, new Quaternion()); 
         }
     }
