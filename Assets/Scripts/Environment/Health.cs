@@ -67,14 +67,10 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damage;
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Bullet"))
-        {
-            TakeDamage(5);
-        }
 
-        if (other.CompareTag("ShotgunProjectile"))
+        if (collision.collider.tag == "ShotgunProjectile")
         {
             TakeDamage(50);
         }
