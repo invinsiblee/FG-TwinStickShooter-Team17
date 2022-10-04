@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Enemies;
+using Player;
+
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private EnemyStatsSo stats;
-    private bool enemyBullet;
     private Transform player;
     private Vector3 playerPos;
 
@@ -30,14 +32,14 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (enemyBullet && other.CompareTag("Player"))
+        if (playerHealth.mortal = true && other.CompareTag("Player"))
         {
-            Destroy(gameObject);
-            
+            Destroy(this.gameObject);
+
         }
-        else if (!enemyBullet && CompareTag("Enemy"))
+        else if (CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
