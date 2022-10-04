@@ -120,13 +120,23 @@ public class PlayerMovement : MonoBehaviour
             PlayerGun.Instance.Shoot();
         }
     }
-    void HandleShotgunInput()
     
+    void HandleShotgunInput()
     {
             Shotgun.Instance.ShotgunShoot();
     }
+    
     void HandleDash()
     {
+        //Immortality timer
+        currentFrame -= 1 * Time.deltaTime;
+        
+        if (currentFrame <= 0)
+        {
+            currentFrame = 0;
+            playerHealth.mortal = true;
+        }
+        
         playerControls.Controls.Dash.performed += ctx => Dash();
 
         void Dash()
@@ -149,16 +159,8 @@ public class PlayerMovement : MonoBehaviour
     }
     public void DashImmortality()
     {
-        Debug.Log("Immortal");
         currentFrame = maxFrames;
         playerHealth.mortal = false;
-
-        if (currentFrame <= 0)
-        {
-            currentFrame = 0;
-            playerHealth.mortal = true;
-            Debug.Log("NotImmortal");
-        }
     }
 }
 
