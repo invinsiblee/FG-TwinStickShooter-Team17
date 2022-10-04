@@ -28,6 +28,7 @@ namespace Player
         {
             currentFrame = maxFrames;
             playerHealth.mortal = false;
+            currentFrame -= 1 * Time.deltaTime;
 
             if (currentFrame <= 0)
             {
