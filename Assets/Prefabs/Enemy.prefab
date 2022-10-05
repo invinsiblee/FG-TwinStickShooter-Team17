@@ -38,7 +38,7 @@ Transform:
   - {fileID: 6246957490103044898}
   - {fileID: 987560540294305783}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6246957489051335037
 MeshFilter:
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b4a19ed67505d24e912da878ec35a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  currentHealth: 50
   stats: {fileID: 11400000, guid: 43abbb3b1a07c534f815b64007e7de15, type: 2}
   deathParticle: {fileID: 8668032338406134270, guid: cdc3eb706b5a39841a29d9cbd0a5fa1f, type: 3}
   enemy: 1
