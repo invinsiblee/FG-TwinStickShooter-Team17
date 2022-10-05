@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6246957489051335033}
   - component: {fileID: 6246957489051335032}
   - component: {fileID: -5804861729899790516}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -166,8 +166,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 50
   stats: {fileID: 11400000, guid: 43abbb3b1a07c534f815b64007e7de15, type: 2}
-  deathParticle: {fileID: 8668032338406134270, guid: cdc3eb706b5a39841a29d9cbd0a5fa1f, type: 3}
   enemy: 1
+  timer: 0
+  time: 0
 --- !u!1 &6246957490103044899
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +181,7 @@ GameObject:
   - component: {fileID: 6246957490103044911}
   - component: {fileID: 6246957490103044908}
   - component: {fileID: 6246957490103044909}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,6 +277,10 @@ PrefabInstance:
     - target: {fileID: 5927933324282976433, guid: df2ab709b9266c040bc5a39dff17d310, type: 3}
       propertyPath: m_Name
       value: SpawnEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927933324282976433, guid: df2ab709b9266c040bc5a39dff17d310, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9154059814990419797, guid: df2ab709b9266c040bc5a39dff17d310, type: 3}
       propertyPath: m_RootOrder

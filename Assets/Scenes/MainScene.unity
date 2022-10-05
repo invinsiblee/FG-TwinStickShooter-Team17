@@ -5001,29 +5001,9 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194228}
-    - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
-      propertyPath: dashCooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
-      propertyPath: dashFrequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
-      propertyPath: lastTimeDashed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4072493389357882129, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072493389357882139, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 1592442027}
-    - target: {fileID: 4072493389357882139, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
-      propertyPath: maxHealth
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4072493389357882142, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: m_RootOrder
@@ -5069,14 +5049,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4072493390584150345, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
-      propertyPath: firingSpeed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4139648574806667131, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 7321195380762635111, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321195380762635111, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8044911393600306769, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: cam
       value: 
@@ -6157,6 +6141,9 @@ MonoBehaviour:
   collidersBase:
   - {fileID: 1224403491}
   colliderArea: []
+  hitOnly:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &1285672591
 Transform:
   m_ObjectHideFlags: 0
@@ -7572,17 +7559,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &1592442027 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2837776900246354491, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
-  m_PrefabInstance: {fileID: 1061621450}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb06be530789cb04dbb92ac35caa8db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &1630325271
 Mesh:
   m_ObjectHideFlags: 0

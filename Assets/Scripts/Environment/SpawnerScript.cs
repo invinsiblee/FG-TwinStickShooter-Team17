@@ -17,6 +17,8 @@ public class SpawnerScript : MonoBehaviour
     [SerializeField] List<Collider> collidersBase ;
     [SerializeField] List<float> colliderArea = new List<float>();
 
+    [SerializeField] LayerMask hitOnly;
+
     [ContextMenu("Gather Colliders")]
     void GetColliders()
     {
@@ -136,7 +138,7 @@ public class SpawnerScript : MonoBehaviour
                 break;
         }
         RaycastHit hit;
-        if (Physics.Raycast(spawnPoint, Vector3.down, out hit, Mathf.Infinity))
+        if (Physics.Raycast(spawnPoint, Vector3.down, out hit, Mathf.Infinity, hitOnly))
         {
             Instantiate(spawnObject, hit.point, Quaternion.identity);
 

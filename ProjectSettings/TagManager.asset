@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Manager
+  - Enemy
+  - BadBullet
+  - GoodBullet
+  - ShotgunProjectile
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -12,7 +17,7 @@ TagManager:
   - OnlyPlayer
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
