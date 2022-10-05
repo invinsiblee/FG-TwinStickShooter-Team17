@@ -6684,7 +6684,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285672589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 168.94164, y: 17.003809, z: 4.1932297}
+  m_LocalPosition: {x: 168.94164, y: 24.01, z: 4.1932297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6722,11 +6722,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2564887decad6f48ba768f8335fbc74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 2
-  currentDead: 0
   ObjectsToSpawn: {fileID: 6246957489051335025, guid: 19b4552d6d0eb82458b94446cf4c96d5, type: 3}
   spawnWait: 0
   spawnMostWait: 2
+  maxEnemies: 2
+  currentDead: 0
   totalObjects: 2
   currentObjects: 0
   spawner: {fileID: 1285672590}
@@ -6742,19 +6742,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b32885b7971031419b3c160c02cd228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnGameObject:
-  - {fileID: 7011685002113066677, guid: c22b48abde2a71341ae3cc96eb363af1, type: 3}
-  spawningposition: []
+  spawnGameObject: {fileID: 7011685002113066677, guid: 6ba8f0151f43d3443a326af70e0dc58f, type: 3}
   spawnWait: 0
   spawnMostWait: 2
   spawnLeastWait: 0
   totalObjects: 5
   currentObjects: 0
-  xAxis: 0
-  zAxis: 251.44
-  yAxis: 0
-  xAxisVertically: 25.52
-  zAxisVertically: 0
+  spawner: {fileID: 1285672590}
 --- !u!4 &1293730059
 Transform:
   m_ObjectHideFlags: 0
@@ -10711,6 +10705,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1428631413}
+    - target: {fileID: 3089415371056765073, guid: 12e2618bed67db240bc288e03689f3cb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3803635437550226448, guid: 12e2618bed67db240bc288e03689f3cb, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10782,6 +10780,10 @@ PrefabInstance:
     - target: {fileID: 3975964398289888342, guid: 12e2618bed67db240bc288e03689f3cb, type: 3}
       propertyPath: m_VersionIndex
       value: 830
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034505800691363302, guid: 12e2618bed67db240bc288e03689f3cb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4358279529689067659, guid: 12e2618bed67db240bc288e03689f3cb, type: 3}
       propertyPath: m_Mesh
@@ -10902,6 +10904,10 @@ PrefabInstance:
     - target: {fileID: 5989642261096958748, guid: 12e2618bed67db240bc288e03689f3cb, type: 3}
       propertyPath: m_VersionIndex
       value: 821
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149207683191921608, guid: 12e2618bed67db240bc288e03689f3cb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6187564579596063270, guid: 12e2618bed67db240bc288e03689f3cb, type: 3}
       propertyPath: m_Mesh
@@ -11319,5 +11325,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 100
   stats: {fileID: 11400000, guid: 43abbb3b1a07c534f815b64007e7de15, type: 2}
-  deathParticle: {fileID: 0}
   enemy: 0
+  timer: 0
+  time: 0

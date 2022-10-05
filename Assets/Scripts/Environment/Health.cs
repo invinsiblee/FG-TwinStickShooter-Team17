@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -9,7 +10,6 @@ public class Health : MonoBehaviour
      */
     public float currentHealth;
     [SerializeField] private EnemyStatsSo stats;
-    [SerializeField] private GameObject deathParticle;
     
     //Manager
     private GameObject manager;
@@ -21,6 +21,10 @@ public class Health : MonoBehaviour
     private AudioSource boxBreak;
     
     public bool enemy;
+    public bool timer;
+
+    [SerializeField] private float time;
+    
     void Start()
     {
         manager = GameObject.Find("GameManager");
@@ -43,6 +47,7 @@ public class Health : MonoBehaviour
     void Update()
     {
         Death();
+        DeathTimer();
     }
 
     private void Death()
@@ -54,7 +59,6 @@ public class Health : MonoBehaviour
             {
                 enemySpawner.currentDead += 1;
                 Score.Instance.SetScore();
-                Instantiate(deathParticle, transform.position, Quaternion.identity);
                 enemySpawner.currentObjects -= 1;
                 enemyDeath.Play();
             }
@@ -66,18 +70,28 @@ public class Health : MonoBehaviour
             Destroy(gameObject);
         }   
     }
+    
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
     }
     private void OnCollisionEnter(Collision collision)
     {
-
         if (collision.collider.tag == "ShotgunProjectile")
         {
             TakeDamage(50);
         }
-    
     }
 
+    void DeathTimer()
+    {
+        if (timer)
+        {
+            time -= 1 * Time.deltaTime;
+            if (time <= 0)
+            {
+                currentHealth = 0;
+            }
+        }
+    }
 }
