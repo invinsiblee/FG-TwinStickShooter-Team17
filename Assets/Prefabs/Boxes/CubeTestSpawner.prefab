@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7011685002113066674}
   - component: {fileID: 8077506574421111305}
   - component: {fileID: 490143035545415852}
+  - component: {fileID: 7378140760279894177}
+  - component: {fileID: 1938225974041272463}
   m_Layer: 0
   m_Name: CubeTestSpawner
   m_TagString: Enemy
@@ -133,6 +135,31 @@ MonoBehaviour:
   enemy: 0
   timer: 1
   time: 20
+--- !u!135 &7378140760279894177
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011685002113066677}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1938225974041272463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011685002113066677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c42680a04faf2448880611f7e40ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4173092024179695875
 PrefabInstance:
   m_ObjectHideFlags: 0

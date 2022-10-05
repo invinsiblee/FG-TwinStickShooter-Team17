@@ -7,8 +7,8 @@ public class PlayerHealth : MonoBehaviour
 {
     public bool mortal = true;
     
-    [SerializeField] private int maxHealth = 100;
-    public int currentHealth;
+    public float maxHealth = 100;
+    public float currentHealth;
 
     public HealthBar healthBar;
 
@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
 
     void CheckPlayerHealth()
     {
-        //healthBar.SetCurrentHealth(currentHealth);
+        healthBar.SetHealth(currentHealth);
         
         if (currentHealth <= 0)
         {
@@ -54,6 +54,5 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log("GotHit");
             TakeDamage(5);
         }
-
     }
 }
