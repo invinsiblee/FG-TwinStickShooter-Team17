@@ -628,6 +628,7 @@ GameObject:
   - component: {fileID: 4072493389357882131}
   - component: {fileID: 4072493389357882139}
   - component: {fileID: 4072493389357882128}
+  - component: {fileID: 4258754291066132876}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -652,7 +653,7 @@ Transform:
   - {fileID: 5974904825978658361}
   - {fileID: 7682122572514678561}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4072493389357882143
 MeshFilter:
@@ -834,6 +835,26 @@ MonoBehaviour:
   maxMortalFrames: 0.25
   dashCooldown: 3
   isGamepad: 0
+--- !u!95 &4258754291066132876
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4072493389357882129}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49e7654dee52d1d40a920a7283103efb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4072493389676259024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +1033,7 @@ MonoBehaviour:
   firingPoint: {fileID: 4072493390044360470}
   projectilePrefab: {fileID: 2219148262741281844, guid: 0ee520ca613845243b37da9319340645, type: 3}
   firingSpeed: 0.2
+  anim: {fileID: 4258754291066132876}
 --- !u!114 &4072493390584150345
 MonoBehaviour:
   m_ObjectHideFlags: 0
