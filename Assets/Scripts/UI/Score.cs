@@ -6,20 +6,27 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
+    public static Score Instance;
     public TextMeshProUGUI scoreText;
     int value = 0;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        Instance = this;
+    }
 
     void Start()
     {
         scoreText.text = value.ToString();
     }
-     void Update()
+     public void SetScore()
     {
+        value += 10;
         scoreText.text = value.ToString();
-
-        if (GameObject.FindGameObjectWithTag("Enemy").activeSelf == false)
-        {
-            scoreText.text = scoreText.text + 10;
-        }
     }
 }

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 36719965422438028}
   - component: {fileID: 5609388912641159958}
   - component: {fileID: 1279539472930939731}
-  - component: {fileID: -5026750256426494207}
   - component: {fileID: 3232175111097627366}
   - component: {fileID: -1661569480658959345}
   m_Layer: 0
@@ -207,21 +206,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotgunProjectileSpeed: 5
   maxShotgunProjectileDistance: 1
-  score: {fileID: -5026750256426494207}
-  scoreText: {fileID: 0}
---- !u!114 &-5026750256426494207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5309891837080957802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de8e26861ef7c5a4088c8ac35a31383d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
 --- !u!54 &3232175111097627366
 Rigidbody:
   m_ObjectHideFlags: 0
