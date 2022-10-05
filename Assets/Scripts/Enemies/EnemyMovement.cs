@@ -3,10 +3,12 @@ using UnityEngine;
     public class EnemyMovement : MonoBehaviour
     {
         [SerializeField] private EnemyStatsSo stats;
+        private float gravityValue = -9.81f;
 
         [SerializeField] private GameObject player;
         private bool dangerZone;
         private CharacterController controller;
+        private Vector3 playerVelocity;
 
         private void Start()
         {
@@ -22,6 +24,8 @@ using UnityEngine;
 
         void Move()
         {
+            playerVelocity.y += gravityValue * Time.deltaTime;
+            
             Vector3 direction = player.transform.position - transform.position;
             Vector3 velocity = direction * stats.speed / 10;
             
