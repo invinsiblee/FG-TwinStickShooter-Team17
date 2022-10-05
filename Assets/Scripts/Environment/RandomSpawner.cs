@@ -29,9 +29,7 @@ public class RandomSpawner : MonoBehaviour
         Spawn();
         spawnWait -= 1 * Time.deltaTime;
     }
-
-   
-
+    
     void Spawn()
     {
         // Takes and cycles through the random indexes of the items in the array.

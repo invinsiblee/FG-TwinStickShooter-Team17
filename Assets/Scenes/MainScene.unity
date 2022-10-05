@@ -2668,6 +2668,7 @@ GameObject:
   - component: {fileID: 1293730059}
   - component: {fileID: 1293730058}
   - component: {fileID: 1293730057}
+  - component: {fileID: 1293730060}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Manager
@@ -2707,7 +2708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnGameObject:
-  - {fileID: 7011685002113066677, guid: 6ba8f0151f43d3443a326af70e0dc58f, type: 3}
+  - {fileID: 7011685002113066677, guid: c22b48abde2a71341ae3cc96eb363af1, type: 3}
   spawningposition: []
   spawnWait: 0
   spawnMostWait: 2
@@ -2734,6 +2735,18 @@ Transform:
   m_Father: {fileID: 1517117139}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1293730060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293730056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a07c5345e5cfbf4b9f0b1291884ecf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1314865361
 GameObject:
   m_ObjectHideFlags: 0
