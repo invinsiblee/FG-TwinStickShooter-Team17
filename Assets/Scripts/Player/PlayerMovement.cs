@@ -95,12 +95,17 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            RaycastHit hit;
+            
             Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+            Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+            float rayLength;
 
-            if (Physics.Raycast(ray, out hit))
+            if (groundPlane.Raycast(ray, out rayLength))
             {
-                transform.LookAt(new Vector3(hit.point.x, transform.position.y, hit.point.z));
+                Vector3 pointToLook = ray.GetPoint(rayLength);
+                Debug.DrawLine(ray.origin, pointToLook, Color.cyan);
+
+                transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
             }
         }
     }
