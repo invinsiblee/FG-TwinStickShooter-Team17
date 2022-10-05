@@ -6,8 +6,6 @@ using Random = UnityEngine.Random;
 
 public class RandomSpawner : MonoBehaviour
 {
-    private bool allowSpawn;
-    
     public GameObject[] spawnGameObject; // The variable for the chosen object or objects to spawn.
     public GameObject[] spawningposition;
     [Header("Spawn timer")]
@@ -36,26 +34,18 @@ public class RandomSpawner : MonoBehaviour
     
     void Spawn()
     {
-        if (allowSpawn)
+        // Takes and cycles through the random indexes of the items in the array.
+        int randimIndex = Random.Range(0, spawnGameObject.Length);
+
+        // Randomises the spawn position with the x/y/z axis also horizontially and vertically.
+        Vector3 randomSpawnPosition = new Vector3(Random.Range(xAxis, zAxis), yAxis, Random.Range(xAxisVertically, zAxisVertically));
+
+        if (currentObjects < totalObjects && spawnWait <= 0)
         {
-            // Takes and cycles through the random indexes of the items in the array.
-            int randimIndex = Random.Range(0, spawnGameObject.Length);
-
-            // Randomises the spawn position with the x/y/z axis also horizontially and vertically.
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(xAxis, zAxis), yAxis, Random.Range(xAxisVertically, zAxisVertically));
-
-            if (currentObjects < totalObjects && spawnWait <= 0)
-            {
-                //Random time
-                spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
-                //Spawn object
-                Instantiate(spawnGameObject [randimIndex], randomSpawnPosition, Quaternion.identity);
-            }
+            //Random time
+            spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
+            //Spawn object
+            Instantiate(spawnGameObject [randimIndex], randomSpawnPosition, Quaternion.identity);
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        allowSpawn = other.CompareTag("Player");
     }
 }

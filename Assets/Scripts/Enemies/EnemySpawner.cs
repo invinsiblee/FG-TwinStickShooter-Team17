@@ -4,38 +4,39 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject[] ObjectsToSpawn;
+    private bool allowSpawn = true;
+    [SerializeField] private int maxEnemies;
+    public int currentDead;
+    
+    public GameObject ObjectsToSpawn;
     
     [Header("Spawn timer")]
-    [HideInInspector] 
     [SerializeField] private float spawnWait;
     [SerializeField] private float spawnMostWait;
-    [SerializeField] private float spawnLeastWait;
-    
+
     [Header("Number of Gamebjects in scene")]
     [SerializeField] private int totalObjects;
     public int currentObjects;
+    [SerializeField] private SpawnerScript spawner;
 
     void Update()
     {
         Spawn();
         spawnWait -= 1 * Time.deltaTime;
+        
+        if (currentDead == maxEnemies)
+        {
+            allowSpawn = false;
+            //Load next level?
+        }
     }
 
     void Spawn()
     {
-        // Takes and cycles through the random indexes of the items in the array.
-        int randomIndex = Random.Range(0, ObjectsToSpawn.Length);
-
-        // Randomises the spawn position with the x/y/z axis also horizontially and vertically.
-        Vector3 randomSpawnPosition = new Vector3(Random.Range(-65, 65), 0, Random.Range(-60, 60));
-
-        if (currentObjects < totalObjects && spawnWait <= 0)
+        if (allowSpawn && currentObjects <= totalObjects && spawnWait <= 0)
         {
-            //Random time
-            spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
-            //Spawn object
-            Instantiate(ObjectsToSpawn[randomIndex], randomSpawnPosition, Quaternion.identity);
+            spawnWait = spawnMostWait;
+            spawner.Spawn(ObjectsToSpawn);
         }
     }
 }

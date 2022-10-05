@@ -52,6 +52,7 @@ public class Health : MonoBehaviour
             currentHealth = 0;
             if (enemy)
             {
+                enemySpawner.currentDead += 1;
                 Score.Instance.SetScore();
                 Instantiate(deathParticle, transform.position, Quaternion.identity);
                 enemySpawner.currentObjects -= 1;
