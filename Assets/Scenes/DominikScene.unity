@@ -1462,7 +1462,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh51884
+  m_Name: pb_Mesh57060
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1667,6 +1667,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 494692514130513683, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: m_Name
+      value: Canvas2
+      objectReference: {fileID: 0}
     - target: {fileID: 2743574916596306780, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: cam
       value: 
