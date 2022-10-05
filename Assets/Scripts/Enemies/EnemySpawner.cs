@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    private bool allowSpawn = true;
-    [SerializeField] private int maxEnemies;
-    public int currentDead;
-    
     public GameObject ObjectsToSpawn;
-    
+    private bool allowSpawn = true;
+
     [Header("Spawn timer")]
     [SerializeField] private float spawnWait;
     [SerializeField] private float spawnMostWait;
 
-    [Header("Number of Gamebjects in scene")]
+    [Header("Enemies that needs to be killed to win")]
+    [SerializeField] private int maxEnemies;
+    public int currentDead;
+    
+    [Header("Number of Gameobjects in scene")]
     [SerializeField] private int totalObjects;
     public int currentObjects;
     [SerializeField] private SpawnerScript spawner;
