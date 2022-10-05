@@ -8,7 +8,7 @@ using UnityEngine;
         [SerializeField] private GameObject player;
         private bool dangerZone;
         private CharacterController controller;
-        private Vector3 playerVelocity;
+        private Vector3 enemyVelocity;
 
         private void Start()
         {
@@ -24,8 +24,9 @@ using UnityEngine;
 
         void Move()
         {
-            playerVelocity.y += gravityValue * Time.deltaTime;
-            
+            enemyVelocity.y += gravityValue * Time.deltaTime;
+            controller.Move(enemyVelocity * Time.deltaTime);
+
             Vector3 direction = player.transform.position - transform.position;
             Vector3 velocity = direction * stats.speed / 10;
             
