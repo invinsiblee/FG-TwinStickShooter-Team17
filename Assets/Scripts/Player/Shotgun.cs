@@ -7,6 +7,7 @@ public class Shotgun : MonoBehaviour
     [SerializeField] Transform firingPoint;
     [SerializeField] GameObject shotgunProjectilePrefab;
     [SerializeField] float firingSpeed;
+    [SerializeField] ShotgunCooldown coolDownScript;
 
     public static Shotgun Instance;
 
@@ -23,6 +24,7 @@ public class Shotgun : MonoBehaviour
         {
             lastTimeShot = Time.time;
             Instantiate(shotgunProjectilePrefab, firingPoint.position, firingPoint.rotation);
+            coolDownScript.HasShot();
         }
 
     }
