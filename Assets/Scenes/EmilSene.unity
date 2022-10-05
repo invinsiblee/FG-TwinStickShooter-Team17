@@ -6448,8 +6448,8 @@ GameObject:
   - component: {fileID: 418610803}
   - component: {fileID: 418610802}
   m_Layer: 0
-  m_Name: Spawn Manager
-  m_TagString: Untagged
+  m_Name: GameManager
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6467,7 +6467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectsToSpawn:
-  - {fileID: 0}
+  - {fileID: 6246957489051335025, guid: 19b4552d6d0eb82458b94446cf4c96d5, type: 3}
   spawnWait: 0
   spawnMostWait: 3
   spawnLeastWait: 2
@@ -6499,7 +6499,7 @@ MonoBehaviour:
   zAxis: 17.46
   yAxis: 0
   xAxisVertically: 0
-  yAxisVertically: 0
+  zAxisVertically: 0
 --- !u!4 &418610804
 Transform:
   m_ObjectHideFlags: 0
