@@ -25,6 +25,5 @@ public class PlayerGun : MonoBehaviour
             lastTimeShot = Time.time;
             Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
         }
-
     }
 }
