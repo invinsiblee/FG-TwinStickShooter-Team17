@@ -685,7 +685,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a7aa357edebcf694ba190c388ab18da8, type: 2}
+  - {fileID: 2100000, guid: 28accc5b584cb5f4682594198800e61d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -832,6 +832,7 @@ MonoBehaviour:
   controllerDeadzone: 0.1
   gamepadRotateSmoothing: 1000
   smoothInputSpeed: 0.2
+  dashSound: {fileID: 0}
   dashSpeed: 0.5
   dashTime: 0.1
   currentMortalFrame: 0
@@ -984,7 +985,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a7aa357edebcf694ba190c388ab18da8, type: 2}
+  - {fileID: 2100000, guid: 28accc5b584cb5f4682594198800e61d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
