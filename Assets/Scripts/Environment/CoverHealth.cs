@@ -2,52 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossHealth : MonoBehaviour
+public class CoverHealth : MonoBehaviour
 {
     public float currentHealth;
-    [SerializeField] private EnemyStatsSo stats;
 
     //Manager
     private GameObject manager;
     private RandomSpawner spawnerScript;
+    private EnemySpawner enemySpawner;
 
-    //Sounds
-    private AudioSource enemyDeath;
     private AudioSource boxBreak;
 
     public bool enemy;
+    public bool timer;
 
-    public BossHealthBar bossHealthBar;
-    public float maxHealth = 750;
-
+    [SerializeField] private float time;
 
     void Start()
     {
         manager = GameObject.Find("GameManager");
         boxBreak = GameObject.Find("BoxBreak").GetComponent<AudioSource>();
-        enemyDeath = GameObject.Find("EnemyDeath").GetComponent<AudioSource>();
         spawnerScript = manager.GetComponent<RandomSpawner>();
 
-        currentHealth = stats.health;
-        currentHealth = maxHealth;
-        bossHealthBar.SetMaxHealth(maxHealth);
+
+        if (enemy)
+        {
+            enemySpawner.currentObjects += 1;
+        }
+        else
+        {
+            spawnerScript.currentObjects += 1;
+        }
     }
 
     void Update()
     {
         Death();
-        CheckBossHealth();
-    }
-
-    void CheckBossHealth()
-    {
-        bossHealthBar.SetHealth(currentHealth);
-
-        if (currentHealth <= 0)
-        {
-            //Dead
-            currentHealth = 0;
-        }
+        DeathTimer();
     }
 
     private void Death()
@@ -57,8 +48,9 @@ public class BossHealth : MonoBehaviour
             currentHealth = 0;
             if (enemy)
             {
-                Score.Instance.SetScoreBoss();
-                enemyDeath.Play();
+                enemySpawner.currentDead += 1;
+                Score.Instance.SetScore();
+                enemySpawner.currentObjects -= 1;
             }
             else
             {
@@ -75,14 +67,21 @@ public class BossHealth : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("GoodBullet") || other.CompareTag("BadBullet"))
         {
-            TakeDamage(5);
+            TakeDamage(1);
         }
-        if (other.CompareTag("ShotgunProjectile"))
+    }
+
+        void DeathTimer()
+    {
+        if (timer)
         {
-            TakeDamage (50);
+            time -= 1 * Time.deltaTime;
+            if (time <= 0)
+            {
+                currentHealth = 0;
+            }
         }
     }
 }
-
