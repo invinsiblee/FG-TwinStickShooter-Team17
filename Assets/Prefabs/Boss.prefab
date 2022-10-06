@@ -1196,7 +1196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4272520549043901395}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35493824, y: 0.7828673, z: 0.52014905}
+  m_LocalPosition: {x: 0.35493824, y: 0.24900009, z: 0.52014905}
   m_LocalScale: {x: 0.2673797, y: 0.2673797, z: 0.2673797}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1364,7 +1364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5706932907702548127}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.544, z: 0}
   m_LocalScale: {x: 0.2673797, y: 0.2673797, z: 0.2673797}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1394,7 +1394,7 @@ GameObject:
   - component: {fileID: 6246957489051335024}
   - component: {fileID: 6246957489051335037}
   - component: {fileID: 6246957489051335026}
-  - component: {fileID: 6246957489051335036}
+  - component: {fileID: 7009745919319424971}
   - component: {fileID: 6246957489051335033}
   - component: {fileID: 6246957489051335032}
   - component: {fileID: -2064731985048583243}
@@ -1423,7 +1423,7 @@ Transform:
   - {fileID: 8425847305978134214}
   - {fileID: 5306327600943752234}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6246957489051335037
 MeshFilter:
@@ -1475,7 +1475,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6246957489051335036
+--- !u!114 &7009745919319424971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1484,7 +1484,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6246957489051335025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fcc8c26f79eb654abfdf9c792fb1c4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e63ba92bc211064ab85214c56b8f52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 6c3d1dc39ef1d074c9d0d4cc1abed5b9, type: 2}
@@ -1562,8 +1562,10 @@ MonoBehaviour:
   - {fileID: 1670022810957978443}
   - {fileID: 3056710895436913842}
   - {fileID: 5627118262904651334}
-  projectilePrefab: {fileID: 2219148262741281844, guid: 0ee520ca613845243b37da9319340645, type: 3}
-  firingSpeed: 0
+  projectilePrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   stats: {fileID: 11400000, guid: 6c3d1dc39ef1d074c9d0d4cc1abed5b9, type: 2}
 --- !u!1 &6246957490103044899
 GameObject:
