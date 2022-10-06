@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHealth : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class BossHealth : MonoBehaviour
     private AudioSource boxBreak;
 
     public bool enemy;
+    public bool boss;
 
     public BossHealthBar bossHealthBar;
     public float maxHealth = 750;
@@ -47,6 +49,7 @@ public class BossHealth : MonoBehaviour
         {
             //Dead
             currentHealth = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
@@ -57,7 +60,7 @@ public class BossHealth : MonoBehaviour
             currentHealth = 0;
             if (enemy)
             {
-                Score.Instance.SetScoreBoss();
+                //Score.Instance.SetScoreBoss();
                 enemyDeath.Play();
             }
             else
