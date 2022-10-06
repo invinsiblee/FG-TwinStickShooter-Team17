@@ -2702,7 +2702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2564887decad6f48ba768f8335fbc74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectsToSpawn: {fileID: 6246957489051335025, guid: 19b4552d6d0eb82458b94446cf4c96d5, type: 3}
+  ObjectsToSpawn: {fileID: 5927933324282976433, guid: df2ab709b9266c040bc5a39dff17d310, type: 3}
   spawnWait: 0
   spawnMostWait: 2
   maxEnemies: 2
@@ -2722,7 +2722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b32885b7971031419b3c160c02cd228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnGameObject: {fileID: 7011685002113066677, guid: 6ba8f0151f43d3443a326af70e0dc58f, type: 3}
+  spawnGameObject: {fileID: 5927933324282976433, guid: 1c8c71fbc48acc340ae5968fa1059b1a, type: 3}
   spawnWait: 0
   spawnMostWait: 2
   spawnLeastWait: 0
