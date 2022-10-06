@@ -813,6 +813,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 2837776900246354491}
+  hurt: {fileID: 0}
 --- !u!114 &4072493389357882128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,7 +1050,7 @@ MonoBehaviour:
   firingPoint: {fileID: 4072493389676259027}
   shotgunProjectilePrefab: {fileID: 5309891837080957802, guid: bc062f5274f2eb8409ba98c12b5a9769, type: 3}
   firingSpeed: 3
-  coolDownScript: {fileID: 0}
+  coolDownScript: {fileID: 3882095303160777819}
 --- !u!1 &5341153191140695565
 GameObject:
   m_ObjectHideFlags: 0

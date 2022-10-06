@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth;
 
     public HealthBar healthBar;
+    [SerializeField] private AudioSource hurt;
 
     void Start()
     {
@@ -45,14 +46,13 @@ public class PlayerHealth : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
+        hurt.Play();
         healthBar.SetHealth(currentHealth);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (mortal == true && other.CompareTag("GoodBullet") || other.CompareTag("BadBullet"))
         {
-            Debug.Log("GotHit");
             TakeDamage(5);
         }
     }
