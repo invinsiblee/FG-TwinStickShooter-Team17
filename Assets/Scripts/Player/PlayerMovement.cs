@@ -16,8 +16,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float controllerDeadzone = 0.1f;
     [SerializeField] private float gamepadRotateSmoothing = 1000f;
     [SerializeField] private float smoothInputSpeed = .2f;
-    
-    [Header("Dashing")]
+
+    [Header("Dashing")] 
+    [SerializeField] private AudioSource dashSound;
     public float dashSpeed;
     public float dashTime;
     [HideInInspector] public float currentMortalFrame;
@@ -158,6 +159,7 @@ public class PlayerMovement : MonoBehaviour
 
         IEnumerator DashMove()
         {
+            dashSound.Play();
             currentMortalFrame = maxMortalFrames;
             playerHealth.mortal = false;
             
