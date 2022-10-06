@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayArcadeMode()
     {
-        SceneManager.LoadScene("Level 4");
+        SceneManager.LoadScene("Arcade");
     }
 
     public void OnEnable()
