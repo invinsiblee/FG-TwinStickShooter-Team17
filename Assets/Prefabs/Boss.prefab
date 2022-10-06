@@ -791,7 +791,7 @@ GameObject:
   - component: {fileID: 6246957489051335038}
   - component: {fileID: 6246957489051335033}
   - component: {fileID: 6246957489051335032}
-  - component: {fileID: -5804861729899790516}
+  - component: {fileID: -2064731985048583243}
   m_Layer: 6
   m_Name: Boss
   m_TagString: Enemy
@@ -890,7 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc8c26f79eb654abfdf9c792fb1c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 43abbb3b1a07c534f815b64007e7de15, type: 2}
+  stats: {fileID: 11400000, guid: 6c3d1dc39ef1d074c9d0d4cc1abed5b9, type: 2}
   player: {fileID: 0}
 --- !u!114 &6246957489051335038
 MonoBehaviour:
@@ -904,7 +904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c55475ec9b47884a9c55d22d729e134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 43abbb3b1a07c534f815b64007e7de15, type: 2}
+  stats: {fileID: 11400000, guid: 6c3d1dc39ef1d074c9d0d4cc1abed5b9, type: 2}
   bulletPosition: {fileID: 6246957490103044898}
   bullet:
   - {fileID: 9017699028443568486, guid: a00cbd374b54e7847b53a8d4812a5bd7, type: 3}
@@ -940,7 +940,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-5804861729899790516
+--- !u!114 &-2064731985048583243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -949,14 +949,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6246957489051335025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b4a19ed67505d24e912da878ec35a40, type: 3}
+  m_Script: {fileID: 11500000, guid: c7909400d75f95c438ea3897642037db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 50
-  stats: {fileID: 11400000, guid: 43abbb3b1a07c534f815b64007e7de15, type: 2}
+  currentHealth: 750
+  stats: {fileID: 11400000, guid: 6c3d1dc39ef1d074c9d0d4cc1abed5b9, type: 2}
   enemy: 1
-  timer: 0
-  time: 0
 --- !u!1 &6246957490103044899
 GameObject:
   m_ObjectHideFlags: 0

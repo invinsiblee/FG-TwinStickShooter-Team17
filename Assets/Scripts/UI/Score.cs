@@ -29,4 +29,9 @@ public class Score : MonoBehaviour
         value += 10;
         scoreText.text = value.ToString();
     }
+    public void SetScoreBoss()
+    {
+        value += 100;
+        scoreText.text = value.ToString();
+    }
 }
