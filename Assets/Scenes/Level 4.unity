@@ -3811,6 +3811,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1539494344}
     m_Modifications:
+    - target: {fileID: 2743574916596306780, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 835447058}
     - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: dashCooldown
       value: 3
@@ -3883,6 +3887,10 @@ PrefabInstance:
       propertyPath: firingSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4139648574806667131, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 835447058}
     - target: {fileID: 7321195380762635111, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3891,6 +3899,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8044911393600306769, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 835447058}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4072493389357882142, guid: 86f1967622fbece4eabcd0652b325176, type: 3}

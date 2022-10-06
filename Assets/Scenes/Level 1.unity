@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh218280
+  m_Name: pb_Mesh243184
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -422,7 +422,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh218116
+  m_Name: pb_Mesh243006
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -659,7 +659,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh218246
+  m_Name: pb_Mesh243150
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1543,6 +1543,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1869615461}
     m_Modifications:
+    - target: {fileID: 2743574916596306780, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1485725647}
     - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: dashCooldown
       value: 3
@@ -1615,6 +1619,14 @@ PrefabInstance:
       propertyPath: firingSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4139648574806667131, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1485725647}
+    - target: {fileID: 5183117142410992027, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1485725650}
     - target: {fileID: 7321195380762635111, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1623,6 +1635,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8044911393600306769, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1485725647}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4072493389357882142, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
@@ -1654,7 +1670,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh218258
+  m_Name: pb_Mesh243162
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2413,7 +2429,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh218304
+  m_Name: pb_Mesh243208
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2578,7 +2594,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh218282
+  m_Name: pb_Mesh243186
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2783,7 +2799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfe610f39b132b4badc30900038651f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1057406348}
+  target: {fileID: 0}
   targetOffset: {x: 0, y: 10, z: -5}
   movementSpeed: 5
 --- !u!81 &1485725649
@@ -2843,7 +2859,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh218202
+  m_Name: pb_Mesh243098
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -3047,7 +3063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e2394e43f51e94ca7ff06d588d64fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnItem: {fileID: 7011685002113066677, guid: c22b48abde2a71341ae3cc96eb363af1, type: 3}
+  spawnItem: {fileID: 7011685002113066677, guid: 6ba8f0151f43d3443a326af70e0dc58f, type: 3}
   collidersBase:
   - {fileID: 865960443}
   colliderArea: []
@@ -3163,7 +3179,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d6e1cedb969976443b2f002a9c7bcccb, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.6
   m_Pitch: 1
@@ -3885,7 +3901,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh218298
+  m_Name: pb_Mesh243202
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
