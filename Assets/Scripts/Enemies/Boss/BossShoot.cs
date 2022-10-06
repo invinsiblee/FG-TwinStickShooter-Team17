@@ -2,12 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BossShoot : MonoBehaviour
 {
     [SerializeField] Transform[] firingPoint;
-    [SerializeField] GameObject projectilePrefab;
-    [SerializeField] float firingSpeed;
+    [SerializeField] GameObject[] projectilePrefab;
     //[SerializeField] Animator anim;
 
     [SerializeField] private EnemyStatsSo stats;
@@ -31,8 +31,7 @@ public class BossShoot : MonoBehaviour
             {
                 currentPosition = t;
                 
-                Instantiate(projectilePrefab, currentPosition.position, currentPosition.rotation);
-                
+                Instantiate(projectilePrefab[Random.Range(0,2)], currentPosition.position, currentPosition.rotation);
             }
 
             //Instantiate(projectilePrefab, firingPoint[firingPoint.Length].position, Quaternion.identity);
