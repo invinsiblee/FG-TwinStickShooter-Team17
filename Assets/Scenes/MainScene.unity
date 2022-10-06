@@ -4453,6 +4453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 6246957489051335025, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6246957489051335033, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
       propertyPath: m_Radius
       value: 4
@@ -4463,11 +4467,11 @@ PrefabInstance:
       objectReference: {fileID: 600981796}
     - target: {fileID: 6880180509472196047, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6880180509472196047, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
