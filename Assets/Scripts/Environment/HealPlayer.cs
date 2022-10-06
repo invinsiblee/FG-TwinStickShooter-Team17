@@ -18,7 +18,7 @@ public class HealPlayer : MonoBehaviour
         {
             if (playerHealth.currentHealth <= playerHealth.maxHealth)
             {
-                playerHealth.currentHealth += 2 * Time.deltaTime;
+                playerHealth.currentHealth += 5 * Time.deltaTime;
             }
         }
     }
