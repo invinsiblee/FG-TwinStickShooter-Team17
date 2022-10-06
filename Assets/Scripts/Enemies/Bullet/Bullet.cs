@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (playerHealth.mortal && other.CompareTag("Player"))
+        if (playerHealth.mortal && other.CompareTag("Player") || other.CompareTag("Cover"))
         {
             Destroy(gameObject);
 
