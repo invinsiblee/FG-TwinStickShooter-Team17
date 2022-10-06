@@ -17,6 +17,9 @@ public class BossHealth : MonoBehaviour
 
     public bool enemy;
 
+    public BossHealthBar bossHealthBar;
+    public float maxHealth = 750;
+
 
     void Start()
     {
@@ -26,11 +29,25 @@ public class BossHealth : MonoBehaviour
         spawnerScript = manager.GetComponent<RandomSpawner>();
 
         currentHealth = stats.health;
+        currentHealth = maxHealth;
+        bossHealthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
     {
         Death();
+        CheckBossHealth();
+    }
+
+    void CheckBossHealth()
+    {
+        bossHealthBar.SetHealth(currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            //Dead
+            currentHealth = 0;
+        }
     }
 
     private void Death()
