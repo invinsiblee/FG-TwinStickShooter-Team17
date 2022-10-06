@@ -15,5 +15,5 @@ MonoBehaviour:
   health: 750
   speed: 2
   damage: 0
-  timeUntilNextShot: 2
+  timeUntilNextShot: 0.5
   bulletSpeed: 5

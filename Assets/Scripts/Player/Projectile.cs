@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("GoodBullet"))
+        if (other.CompareTag("GoodBullet") || other.CompareTag("BossGoodBullet"))
         {
             Destroy(this.gameObject);
             Destroy(other.gameObject);
