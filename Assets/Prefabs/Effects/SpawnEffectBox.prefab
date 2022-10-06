@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3956011657069168153}
   - component: {fileID: 6581576902282298706}
   - component: {fileID: -3499427302441417549}
+  - component: {fileID: 5198521639432533735}
   m_Layer: 0
   m_Name: SpawnEffectBox
   m_TagString: Untagged
@@ -4896,3 +4897,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 3
+--- !u!114 &5198521639432533735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5927933324282976433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9feb7a83295f9ef4abc4e1c7e8242b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTime: 0
+  objectToSpawn: {fileID: 7011685002113066677, guid: 6ba8f0151f43d3443a326af70e0dc58f, type: 3}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3956011657069168153}
   - component: {fileID: 6581576902282298706}
   - component: {fileID: -3499427302441417549}
+  - component: {fileID: -2918307737136173677}
   m_Layer: 0
   m_Name: SpawnEffect
   m_TagString: Untagged
@@ -4896,3 +4897,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 3
+--- !u!114 &-2918307737136173677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5927933324282976433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9feb7a83295f9ef4abc4e1c7e8242b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTime: 0
+  objectToSpawn: {fileID: 6246957489051335025, guid: 19b4552d6d0eb82458b94446cf4c96d5, type: 3}
