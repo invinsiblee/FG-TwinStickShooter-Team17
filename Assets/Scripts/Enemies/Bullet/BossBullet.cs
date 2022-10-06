@@ -16,7 +16,7 @@ public class BossBullet : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector3.forward * stats.bulletSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * (stats.bulletSpeed * Time.deltaTime), Space.Self);
     }
 
     private void OnTriggerEnter(Collider other)
