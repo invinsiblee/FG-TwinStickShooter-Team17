@@ -30,6 +30,7 @@ public class BossShoot : MonoBehaviour
             foreach (var t in firingPoint)
             {
                 currentPosition = t;
+                
                 Instantiate(projectilePrefab, currentPosition.position, currentPosition.rotation);
                 
             }
