@@ -73,13 +73,13 @@ public class BossHealth : MonoBehaviour
     {
         currentHealth -= damage;
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.tag == "Bullet")
+        if (other.CompareTag("Bullet"))
         {
             TakeDamage(5);
         }
-        if (collision.collider.tag == "ShotgunProjectile")
+        if (other.CompareTag("ShotgunProjectile"))
         {
             TakeDamage (50);
         }
