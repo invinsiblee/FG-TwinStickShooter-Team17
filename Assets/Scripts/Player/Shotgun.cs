@@ -8,6 +8,7 @@ public class Shotgun : MonoBehaviour
     [SerializeField] GameObject shotgunProjectilePrefab;
     [SerializeField] float firingSpeed;
     [SerializeField] ShotgunCooldown coolDownScript;
+    private AudioSource shotgun;
 
     public static Shotgun Instance;
 
@@ -16,12 +17,14 @@ public class Shotgun : MonoBehaviour
     void Awake()
     {
         Instance = GetComponent<Shotgun>();
+        shotgun = GameObject.Find("ShotgunSound").GetComponent<AudioSource>();
     }
 
     public void ShotgunShoot()
     {
         if (lastTimeShot + firingSpeed < Time.time)
         {
+            shotgun.Play();
             lastTimeShot = Time.time;
             Instantiate(shotgunProjectilePrefab, firingPoint.position, firingPoint.rotation);
             coolDownScript.HasShot();
