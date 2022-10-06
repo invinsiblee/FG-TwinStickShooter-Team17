@@ -20,7 +20,7 @@ public class BossHealth : MonoBehaviour
     public bool boss;
 
     public BossHealthBar bossHealthBar;
-    public float maxHealth = 750;
+    public float maxHealth = 2000;
 
 
     void Start()

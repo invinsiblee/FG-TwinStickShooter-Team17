@@ -67,7 +67,7 @@ public class CoverHealth : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("GoodBullet") || other.CompareTag("BadBullet"))
+        if (other.CompareTag("BossGoodBullet") || other.CompareTag("BossBadBullet"))
         {
             TakeDamage(1);
         }

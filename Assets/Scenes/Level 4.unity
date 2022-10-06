@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1576036029}
-  targetOffset: {x: 0, y: 10, z: -5}
+  targetOffset: {x: 0, y: 15, z: -8}
   movementSpeed: 5
 --- !u!81 &835447060
 AudioListener:
@@ -1194,9 +1194,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -2064731985048583243, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
+      propertyPath: maxHealth
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: -2064731985048583243, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
       propertyPath: bossHealthBar
       value: 
       objectReference: {fileID: 1542254060}
+    - target: {fileID: -2064731985048583243, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
+      propertyPath: currentHealth
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 2376064425633749011, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2578,7 +2586,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1185520
+  m_Name: pb_Mesh33428
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2797,6 +2805,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 835447058}
+    - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: dashTime
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: dashSound
       value: 

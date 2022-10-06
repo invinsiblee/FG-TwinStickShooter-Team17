@@ -1454,7 +1454,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7e64d3f65cfbd64ea618843feaf1c9b, type: 2}
+  - {fileID: 2100000, guid: 9328736ec9de3d14cbef96822b1df83c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1536,6 +1536,7 @@ MonoBehaviour:
   currentHealth: 750
   stats: {fileID: 11400000, guid: 6c3d1dc39ef1d074c9d0d4cc1abed5b9, type: 2}
   enemy: 1
+  boss: 0
   bossHealthBar: {fileID: 0}
   maxHealth: 750
 --- !u!114 &3723377194830652125

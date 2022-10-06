@@ -38,6 +38,10 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Death()
     {
+        if (currentHealth <= 25)
+        {
+            gameObject.GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+        }
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -60,5 +64,6 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(30);
         }
+
     }
 }

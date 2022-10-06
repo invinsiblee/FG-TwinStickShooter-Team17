@@ -919,6 +919,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1485725647}
     - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: dashTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: dashSound
       value: 
       objectReference: {fileID: 545736594}
@@ -1869,7 +1873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1057406348}
-  targetOffset: {x: 0, y: 10, z: -5}
+  targetOffset: {x: 0, y: 15, z: -8}
   movementSpeed: 5
 --- !u!81 &1485725649
 AudioListener:

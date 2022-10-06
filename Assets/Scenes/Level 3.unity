@@ -2669,7 +2669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1679114813}
-  targetOffset: {x: 0, y: 10, z: -5}
+  targetOffset: {x: 0, y: 15, z: -8}
   movementSpeed: 5
 --- !u!81 &957140162
 AudioListener:

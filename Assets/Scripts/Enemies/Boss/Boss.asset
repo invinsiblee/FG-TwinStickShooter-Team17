@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27fc9896781b8e24eaf5baa3e2217793, type: 3}
   m_Name: Boss
   m_EditorClassIdentifier: 
-  health: 750
+  health: 2000
   speed: 2
   damage: 0
-  timeUntilNextShot: 0.5
-  bulletSpeed: 5
+  timeUntilNextShot: 0.25
+  bulletSpeed: 8
