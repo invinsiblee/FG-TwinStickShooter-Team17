@@ -2647,7 +2647,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1348783976}
   - component: {fileID: 1348783978}
-  - component: {fileID: 1348783977}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Manager
@@ -2670,26 +2669,6 @@ Transform:
   m_Father: {fileID: 1539494344}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1348783977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348783975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2564887decad6f48ba768f8335fbc74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectsToSpawn: {fileID: 5927933324282976433, guid: df2ab709b9266c040bc5a39dff17d310, type: 3}
-  spawnWait: 0
-  spawnMostWait: 2
-  maxEnemies: 2
-  currentDead: 0
-  totalObjects: 2
-  currentObjects: 0
-  spawner: {fileID: 751318112}
 --- !u!114 &1348783978
 MonoBehaviour:
   m_ObjectHideFlags: 0
