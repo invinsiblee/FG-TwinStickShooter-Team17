@@ -2910,6 +2910,11 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &600981796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6246957489051335025, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
+  m_PrefabInstance: {fileID: 1029677333}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &600981804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6246957489051335024, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
@@ -4372,6 +4377,18 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 9017699028443568486, guid: 1511e14453c8ecb4f80cf91f0d5ea0de, type: 3}
+    - target: {fileID: 3723377194830652125, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
+      propertyPath: projectilePrefab.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723377194830652125, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
+      propertyPath: projectilePrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 9017699028443568486, guid: 1511e14453c8ecb4f80cf91f0d5ea0de, type: 3}
+    - target: {fileID: 3723377194830652125, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
+      propertyPath: projectilePrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 9017699028443568486, guid: 0f3c8d7ffd700204cb79b27f18a55841, type: 3}
     - target: {fileID: 5313747449513932288, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
       propertyPath: cam
       value: 
@@ -4386,7 +4403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6246957489051335024, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.5
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 6246957489051335024, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
       propertyPath: m_LocalScale.z
@@ -4443,7 +4460,7 @@ PrefabInstance:
     - target: {fileID: 6246957489051335036, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1418033778}
+      objectReference: {fileID: 600981796}
     - target: {fileID: 6880180509472196047, guid: 925bf1605c46c3c44bfdb14e1928f40d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -6409,11 +6426,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1418033778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4072493389357882129, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
-  m_PrefabInstance: {fileID: 1061621450}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1428631413
 Mesh:
   m_ObjectHideFlags: 0
