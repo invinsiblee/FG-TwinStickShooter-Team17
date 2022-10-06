@@ -6011,7 +6011,7 @@ MonoBehaviour:
   colliderArea: []
   hitOnly:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!4 &1285672591
 Transform:
   m_ObjectHideFlags: 0
@@ -7145,7 +7145,7 @@ GameObject:
   - component: {fileID: 1565153783}
   - component: {fileID: 1565153782}
   - component: {fileID: 1565153781}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8993,7 +8993,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-64852
+  m_Name: pb_Mesh-130826
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
