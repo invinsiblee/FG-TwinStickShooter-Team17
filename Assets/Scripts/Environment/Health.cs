@@ -58,7 +58,7 @@ public class Health : MonoBehaviour
             if (enemy)
             {
                 enemySpawner.currentDead += 1;
-                Score.Instance.SetScore();
+                //Score.Instance.SetScore();
                 enemySpawner.currentObjects -= 1;
                 enemyDeath.Play();
             }

@@ -501,9 +501,9 @@ MonoBehaviour:
   ObjectsToSpawn: {fileID: 5927933324282976433, guid: df2ab709b9266c040bc5a39dff17d310, type: 3}
   spawnWait: 0
   spawnMostWait: 2
-  maxEnemies: 2
+  maxEnemies: 5
   currentDead: 0
-  totalObjects: 2
+  totalObjects: 3
   currentObjects: 0
   spawner: {fileID: 1584968979}
 --- !u!114 &301764584
