@@ -13,6 +13,7 @@ public class BossShoot : MonoBehaviour
     [SerializeField] private EnemyStatsSo stats;
 
     private float currentFrame;
+    private Transform currentPosition;
 
     private void Update()
     {
@@ -26,7 +27,14 @@ public class BossShoot : MonoBehaviour
         {
             currentFrame = stats.timeUntilNextShot;
             //anim.SetTrigger("shoot");
-            Instantiate(projectilePrefab, firingPoint[1].position, Quaternion.identity);
+            foreach (var t in firingPoint)
+            {
+                currentPosition = t;
+                Instantiate(projectilePrefab, currentPosition.position, Quaternion.identity);
+                
+            }
+
+            //Instantiate(projectilePrefab, firingPoint[firingPoint.Length].position, Quaternion.identity);
         }
     }
 }
