@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -22,11 +23,16 @@ public class EnemySpawner : MonoBehaviour
     public int currentObjects;
     [SerializeField] private SpawnerScript spawner;
 
+    public TextMeshProUGUI enemiesLeftText;
+
     void Update()
     {
         Spawn();
         spawnWait -= 1 * Time.deltaTime;
-        
+
+        //enemies left counter
+        enemiesLeftText.text = "Enemies to kill: " + (maxEnemies - currentDead);
+
         if (currentDead == maxEnemies)
         {
             allowSpawn = false;

@@ -19,7 +19,11 @@ public class SpawnerScript : MonoBehaviour
 
     [SerializeField] LayerMask hitOnly;
 
+    
     [ContextMenu("Gather Colliders")]
+
+    
+
     void GetColliders()
     {
         collidersBase = GetComponentsInChildren<Collider>().ToList<Collider>();
