@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    private Scene scene;
     /*
      * Attach this to gameobject
      */
@@ -27,6 +29,7 @@ public class Health : MonoBehaviour
     
     void Start()
     {
+        scene = SceneManager.GetActiveScene();
         manager = GameObject.Find("GameManager");
         boxBreak = GameObject.Find("BoxBreak").GetComponent<AudioSource>();
         enemyDeath = GameObject.Find("EnemyDeath").GetComponent<AudioSource>();
@@ -48,6 +51,7 @@ public class Health : MonoBehaviour
     {
         Death();
         DeathTimer();
+        ScoreCount();
     }
 
     private void Death()
@@ -69,6 +73,15 @@ public class Health : MonoBehaviour
             }
             Destroy(gameObject);
         }   
+
+    }
+    void ScoreCount()
+    {
+        if (currentHealth <= 0 && scene.name == "Arcade")
+        {
+            Death();
+            Score.Instance.SetScore();
+        }
     }
     
     void TakeDamage(int damage)
