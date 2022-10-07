@@ -2023,6 +2023,7 @@ MonoBehaviour:
   totalObjects: 7
   currentObjects: 0
   spawner: {fileID: 751318112}
+  enemiesLeftText: {fileID: 0}
 --- !u!1 &1368719338
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,6 +2724,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 835447058}
+    - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: dashTime
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 4072493389357882128, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: dashSound
       value: 
