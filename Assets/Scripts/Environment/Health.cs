@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private GameObject deathAnimation;
     private Scene scene;
     /*
      * Attach this to gameobject
@@ -61,6 +62,7 @@ public class Health : MonoBehaviour
             currentHealth = 0;
             if (enemy)
             {
+                Instantiate(deathAnimation, transform.position, Quaternion.identity);
                 enemySpawner.currentDead += 1;
                 //Score.Instance.SetScore();
                 enemySpawner.currentObjects -= 1;
