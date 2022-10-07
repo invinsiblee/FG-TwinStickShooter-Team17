@@ -33,8 +33,7 @@ public class EnemySpawner : MonoBehaviour
         //enemies left counter
         enemiesLeftText.text = "Enemies to kill: " + (maxEnemies - currentDead);
 
-        Mathf.Clamp(currentDead, 0f, Mathf.Infinity);
-        if (currentDead == maxEnemies)
+        if (currentDead >= maxEnemies)
         {
             allowSpawn = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
